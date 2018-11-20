@@ -10,6 +10,10 @@
 
     <!--Description-->
     
+        <meta name="description" content="算法设计:计数1的位数题目和代码来自于python123.io计数1的位数当你写下一个正整数的二进制数形式时，有没有想要探究一下这个二进制数里有多少位数为1呢？
+例如：99 = 0b1100011
+算法设计123456def count_of_1bits(value):    n = 0    wh">
+    
 
     <!--Author-->
     
@@ -40,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2018/11 - 廖鸿伟的博客</title>
+    <title>廖鸿伟的博客</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -127,9 +131,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -137,43 +139,59 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">2018/11</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2018/11/20/Python_Idiom/">
-        <span class="archive-date">
-            Nov 2018
-        </span>
-        Python惯例
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2018/11/20/alg_des/">
+                Untitled
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2018-11-20</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h3 id="算法设计-计数1的位数"><a href="#算法设计-计数1的位数" class="headerlink" title="算法设计:计数1的位数"></a>算法设计:计数1的位数</h3><h6 id="题目和代码来自于python123-io"><a href="#题目和代码来自于python123-io" class="headerlink" title="题目和代码来自于python123.io"></a>题目和代码来自于python123.io</h6><h3 id="计数1的位数"><a href="#计数1的位数" class="headerlink" title="计数1的位数"></a>计数1的位数</h3><p>当你写下一个正整数的二进制数形式时，有没有想要探究一下这个二进制数里有多少位数为1呢？</p>
+<p>例如：99 = 0b1100011</p>
+<h3 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def count_of_1bits(value):</span><br><span class="line">    n = 0</span><br><span class="line">    while value:</span><br><span class="line">        value &amp;= value - 1</span><br><span class="line">        n += 1</span><br><span class="line">    return n</span><br></pre></td></tr></table></figure>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">count_of_1bits(0b11001100)</span><br></pre></td></tr></table></figure>
+<p>让我们输出结果查看</p>
+<p>结果为四</p>
+<h3 id="算法详解"><a href="#算法详解" class="headerlink" title="算法详解"></a>算法详解</h3><p>首先定义一个函数,传入一个数值value，定义一个变量n，用来计算二进制数值中1的个数。一个while循环，当value的值为0的时候结束，循环让value与value-1相与，value-1会让value的最后一个1变为0，后面的0变为1，1变为0，前面的数字不作任何变化，那么，当原本的value与之想与的时候，前面相同的部分不作改变，而后面跟之前完全相反，相与全部变为0，之后令value的值为相与后的结果。这样就把之前的最后一个1变为了0，其后面的值也变为了0，之前倒数第二个1变成了新值的最后一个1，这样循环，直至value的值为0，最后n的数值就是1的个数。</p>
+<h3 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h3><p>计算二进制数中数字1的个数，这个题目本身不难，其中一种最简单的方法就是循环遍历该二进制数转化成的字符串，遇见1加1即可，但是这样的算法设计显然没有上面的优秀，上面的代码运用了与运算，直接在计算机底层运算，并且次数更少，时间复杂的和空间复杂度更高</p>
+<p>在平时编写代码的过程中，我们要灵活的运用逻辑运算符，这样会使我们的程序更加的效率</p>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2018/11/20/stu_man_sys/">
-        <span class="archive-date">
-            Nov 2018
-        </span>
-        学生管理系统代码
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2018/11/20/alg_des/">
-        <span class="archive-date">
-            Nov 2018
-        </span>
-        Untitled
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
+
 
 </div>
 
